@@ -1,0 +1,12 @@
+Flask
+beautifulsoup4
+scikit-learn
+nltk
+requests
+gensim
+numpy
+pandas
+joblib
+langdetect
+textblob
+emoji

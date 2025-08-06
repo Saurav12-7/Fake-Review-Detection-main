@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Review Detector</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom styles for specific elements and animations -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Defer script loading to ensure HTML is parsed first -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles for the body to ensure full-page centering and font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1e1e2f; /* Dark background */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white font-inter antialiased">
+    <div class="container bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl max-w-sm md:max-w-2xl lg:max-w-3xl w-full mx-auto border border-gray-700">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-green-400 mb-4 flex flex-col items-center justify-center text-center">
+            <span class="mb-2">🕵️ Fake Review Detection 🕵️</span>
+            <span class="text-xl md:text-2xl font-semibold text-gray-300">Unmasking Authenticity</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed text-center">
+            Analyze Amazon product reviews and<br class="md:hidden"> check if they are real (original) or fake (computer generated).
+        </p>
+        
+        <div class="flex flex-col items-center space-y-4">
+            <input type="text" id="url" placeholder="Enter Amazon Product URL (e.g., https://www.amazon.in/dp/B0BP7M277Z)"
+                   class="w-full p-3 md:p-4 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500 text-white placeholder-gray-400 text-base md:text-lg transition duration-200">
+            
+            <div class="flex flex-col md:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
+                <button onclick="analyzeReviews()"
+                        class="flex-1 py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75">
+                    Analyze Reviews
+                </button>
+                <button onclick="clearResults()"
+                        class="flex-1 py-3 px-6 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75">
+                    Clear
+                </button>
+            </div>
+        </div>
+
+        <div id="loading" class="mt-8 text-xl text-green-300 animate-pulse text-center hidden">
+            🔍 Fetching and Analyzing Reviews... Please wait.
+        </div>
+        
+        <div id="result" class="mt-8">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+    <footer class="absolute bottom-4 text-gray-500 text-sm">
+        &copy; 2025 Fake Review Detector. All rights reserved.
+    </footer>
+</body>
+</html>
