@@ -65,7 +65,7 @@ python app.py
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!  
-Feel free to check [issues page](https://github.com/Saurav12-7/Fake-Review-Detection/issues).
+Feel free to check [issues page](https://github.com/Saurav12-7/Fake-Review-Detection-main/issues).
 
 ## 📄 License
 
