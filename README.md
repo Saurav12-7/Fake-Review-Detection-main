@@ -29,9 +29,9 @@ Empowered by AI, NLP, and machine learning, this web app classifies reviews as *
 
 ## 📸 Screenshots
 
-![Screenshot](https://github.com/Saurav12-7/Fake-Review-Detection/blob/main/assets/Screenshot%20(305).png)
+![Screenshot](https://github.com/Saurav12-7/Fake-Review-Detection-main/blob/main/assets/Screenshot%20(305).png)
 
-![](https://github.com/Saurav12-7/Fake-Review-Detection/blob/main/assets/Screenshot%20(306).png)
+![](https://github.com/Saurav12-7/Fake-Review-Detection-main/blob/main/assets/Screenshot%20(306).png)
 
 ## 🚚 Getting Started
 
