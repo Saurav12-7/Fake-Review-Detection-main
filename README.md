@@ -67,9 +67,7 @@ python app.py
 Contributions, issues and feature requests are welcome!  
 Feel free to check [issues page](https://github.com/Saurav12-7/Fake-Review-Detection-main/issues).
 
-## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
 
 ## 👨‍💻 Developer
 
